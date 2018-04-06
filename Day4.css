@@ -1,0 +1,78 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+@media screen and (min-width: 760px){
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows:1fr 1fr 1fr 1fr;
+	grid-template-areas:
+	"dog1  dog1p"
+	"dog2  dog2p"
+	"dog3  dog3p"
+	"dog4  dog4p";
+	grid-gap: 10px;
+}
+}
+
+.img{
+	height: 400px;
+	width: 400px;
+}
+
+.nav-tabs {
+    margin-bottom: 15px;
+}
+.sign-with {
+    margin-top: 25px;
+    padding: 20px;
+}
+div#OR {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #C2C2C2;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    font-size: 12px;
+    float: right;
+    position: absolute;
+    right: -16px;
+    top: 40%;
+    z-index: 1;
+    background: #DFDFDF;
+}
+body { margin-top:20px; }
+.modal-body:not(.two-col) { padding:0px }
+.glyphicon { margin-right:5px; }
+.glyphicon-new-window { margin-left:5px; }
+.modal-body .radio,.modal-body .checkbox {margin-top: 0px;margin-bottom: 0px;}
+.modal-body .list-group {margin-bottom: 0;}
+.margin-bottom-none { margin-bottom: 0; }
+.modal-body .radio label,.modal-body .checkbox label { display:block; }
+.modal-footer {margin-top: 0px;}
+@media screen and (max-width: 325px){
+    .btn-close {
+        margin-top: 5px;
+        width: 100%;
+    }
+    .btn-results {
+        margin-top: 5px;
+        width: 100%;
+    }
+    .btn-vote{
+        margin-top: 5px;
+        width: 100%;
+    }
+    
+}
+.modal-footer .btn+.btn {
+    margin-left: 0px;
+}
+.progress {
+    margin-right: 10px;
+}

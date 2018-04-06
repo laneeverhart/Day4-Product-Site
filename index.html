@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Day 4 Product Site</title>
+	<link rel="stylesheet" type="text/css" href="Day4.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<!-- Large modal -->
+<!-- <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Login modal</button> -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×</button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Login/Registration</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
+                            <li><a href="#Registration" data-toggle="tab">Registration</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="Login">
+                                <form role="form" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label">
+                                        Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="email1" placeholder="Email" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1" class="col-sm-2 control-label">
+                                        Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            Submit</button>
+                                        <a href="javascript:;">Forgot your password?</a>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="Registration">
+                                <form role="form" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label">
+                                        Name</label>
+                                    <div class="col-sm-10">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <select class="form-control">
+                                                    <option>Mr.</option>
+                                                    <option>Ms.</option>
+                                                    <option>Mrs.</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" placeholder="Name" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label">
+                                        Email</label>
+                                    <div class="col-sm-10">
+                                    	<input type="email" class="form-control" id="email1" placeholder="Email" />
+                                       <!--  <input type="email" class="form-control" id="email" placeholder="Email" /> -->
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mobile" class="col-sm-2 control-label">
+                                        Mobile</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="mobile" placeholder="Mobile" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-sm-2 control-label">
+                                        Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" id="password" placeholder="Password" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <button type="button" class="btn btn-primary btn-sm">
+                                            Save & Continue</button>
+                                        <button type="button" class="btn btn-default btn-sm">
+                                            Cancel</button>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="OR" class="hidden-xs">
+                            OR</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row text-center sign-with">
+                            <div class="col-md-12">
+                                <h3>
+                                    Sign in with</h3>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="btn-group btn-group-justified">
+                                    <a href="https://www.facebook.com/" target="_blank" class="btn btn-primary">Facebook</a> <a href="https://accounts.google.com/ServiceLogin/identifier?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank" class="btn btn-danger">
+                                        Google</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Dog Bed Warehouse</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="OurStory.html">Our Story</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Beds <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Girl Dog Beds</a></li>
+            <li><a href="#">Boy Dog Beds</a></li>
+            <li><a href="#">Beds By Size</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" data-toggle="modal" data-target="#contact">Contact Us</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li id="Login"><a href="#" data-toggle="modal" data-target="#myModal">Login or Register</a></li>
+            <!-- <li><a href="#">Register</a></li> -->
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+	<div class="jumbotron">
+	<h1>The Best Dogbeds Anywhere</h1>
+</div>
+	
+	<div class="grid">
+		<div class="dog1">
+			<img src="http://www.orvis.co.uk/orvis_assets/prodimg/2ECESD18khk.jpg">
+		</div>
+		<div class="dog1p">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div class="dog2">
+			<img src="https://secure.img2-fg.wfcdn.com/im/98829487/resize-h260-w260%5Ecompr-r85/1540/15400550/Hooded/Dome+Dog+Beds.jpg" width="356" height="219">
+		</div>
+		<div class="dog2p">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div class="dog3">
+			<img src="https://images.costco-static.com/ImageDelivery/imageService?profileId=12026540&imageId=1177324-847__1&recipeName=350" width="356" height="219">
+		</div>
+		<div class="dog3p">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div class="dog4">
+			<img src="https://secure.img2-fg.wfcdn.com/im/20970514/resize-h260-w260%5Ecompr-r85/1198/11988677/Sofa+Dog+Beds.jpg" width="356" height="219">
+		</div>
+		<div class="dog4p">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+</div>
+        <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="panel-title" id="contactLabel"><span class="glyphicon glyphicon-info-sign"></span> Any questions? Feel free to contact us.</h4>
+                    </div>
+                    <form action="#" method="post" accept-charset="utf-8">
+                    <div class="modal-body" style="padding: 5px;">
+                          <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
+                                    <input class="form-control" name="firstname" placeholder="First Name" type="text" required autofocus />
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
+                                    <input class="form-control" name="lastname" placeholder="Last Name" type="text" required />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12" style="padding-bottom: 10px;">
+                                    <input class="form-control" name="email" placeholder="E-mail" type="email" required />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12" style="padding-bottom: 10px;">
+                                    <input class="form-control" name="subject" placeholder="Subject" type="text" required />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <textarea style="resize:vertical;" class="form-control" placeholder="Message..." rows="6" name="comment" required></textarea>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="panel-footer" style="margin-bottom:-14px;">
+                            <input type="submit" class="btn btn-success" value="Send"/>
+                                <!--<span class="glyphicon glyphicon-ok"></span>-->
+                            <input type="reset" class="btn btn-danger" value="Clear" />
+                                <!--<span class="glyphicon glyphicon-remove"></span>-->
+                            <button style="float: right;" type="button" class="btn btn-default btn-close" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
